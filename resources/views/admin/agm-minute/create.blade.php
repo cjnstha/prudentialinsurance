@@ -57,7 +57,7 @@
                                 <!-- /.card-body -->
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a href="#" class="btn btn-outline-danger">Cancel</a>
+                                    <a href="{{route('agm.index')}}" class="btn btn-outline-danger">Cancel</a>
                                 </div>
                             </form>
                         </div>

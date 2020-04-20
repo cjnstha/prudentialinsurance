@@ -192,36 +192,36 @@
                                 <p>AGM Minute</p>
                             </a>
                         </li>
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{route('kyc.index')}}" class="nav-link {{ Route::currentRouteNamed('kyc.index') ? 'active' : '' }}">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>KYC Forms</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>Policy Proposal Forms</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>Right Share Forms</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>Claim Forms</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>Surveyor Listing Applicatio Forms</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
+                        <li class="nav-item">
+                            <a href="{{route('kyc.index')}}" class="nav-link {{ Route::currentRouteNamed('kyc.index') ? 'active' : '' }}">
+                                <i class="fas fa-user-tag nav-icon"></i>
+                                <p>KYC Forms</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('claim.index')}}" class="nav-link {{ Route::currentRouteNamed('claim.index') ? 'active' : '' }}">
+                                <i class="fas fa-user-tag nav-icon"></i>
+                                <p>Claim Forms</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('rightshare.index')}}" class="nav-link {{ Route::currentRouteNamed('rightshare.index') ? 'active' : '' }}">
+                                <i class="fas fa-user-tag nav-icon"></i>
+                                <p>Right Share Forms</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('policyForm.index')}}" class="nav-link {{ Route::currentRouteNamed('policyForm.index') ? 'active' : '' }}">
+                                <i class="fas fa-user-tag nav-icon"></i>
+                                <p>Policy Proposal Forms</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url('/admin/view-roles')}}" class="nav-link">
+                                <i class="fas fa-user-tag nav-icon"></i>
+                                <p>Surveyor Listing Applicatio Forms</p>
+                            </a>
+                        </li>
 {{--                        <li class="nav-item">--}}
 {{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
 {{--                                <i class="fas fa-user-tag nav-icon"></i>--}}

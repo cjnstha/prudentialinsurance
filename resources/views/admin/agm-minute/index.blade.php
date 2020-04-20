@@ -49,8 +49,8 @@
                   <td>{{$agm->agm_files}}</td>
                   <td>{{$agm->status}}</td>
                   <td class="inline-flex">
-{{--                      <a href="{{route('agm.edit',$agm->id)}}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit </a> &nbsp; &nbsp;--}}
-{{--                      <a href="{{route('agm.destroy',$agm->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete </a>--}}
+                      <a href="{{route('agm.edit',$agm->id)}}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit </a> &nbsp; &nbsp;
+                      <a href="{{route('agm.destroy',$agm->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete </a>
                   </td>
                 </tr>
                     @empty

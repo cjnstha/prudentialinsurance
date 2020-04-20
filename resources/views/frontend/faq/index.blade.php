@@ -47,7 +47,7 @@
 								      <h5 class="panel-title">{{++$key}}. {{$faq->title}}</h5>
 								    </div>
 							    </a>
-							    <div id="collapse{{ $faq->id }}" class="panel-collapse collapse in" aria-expanded="true" style="">
+							    <div id="collapse{{ $faq->id }}" class="panel-collapse collapse" aria-expanded="false" style="">
 							      <div class="panel-body">
 							      	<p>{!! $faq->details !!}</p>
 							      </div>

@@ -10,7 +10,8 @@ use Carbon\Carbon;
 class BODController extends Controller
 {
     public function index(){
-        return view('admin.bod.index');
+        $bods = BOD::all();
+        return view('admin.bod.index',compact('bods'));
     }
 
     public function create(){
@@ -29,14 +30,14 @@ class BODController extends Controller
                 $photo_name = md5(time());
                 $photo_original_name = $destination . '/' . $photo_name . '.' . $ext;
                 $image->move($destination, $photo_original_name);
-                $bod->image = $photo_original_name;
+                $bod->bod_imag = $photo_original_name;
             }
             $bod->bod_name = $data['bod_name'];
-            $bod->bod_name_np = $data['bod_name_np'];
+            $bod->bod_name_nep = $data['bod_name_np'];
             $bod->bod_position = $data['bod_position'];
-            $bod->bod_position_np = $data['bod_position_np'];
+            $bod->bod_position_nep = $data['bod_position_np'];
             $bod->bod_message = $data['bod_message'];
-            $bod->bod_message_np = $data['bod_message_np'];
+            $bod->bod_message_nep = $data['bod_message_np'];
             $bod->status = $data['status'];
             $bod->updated_at = Carbon::today();
             $bod->save();

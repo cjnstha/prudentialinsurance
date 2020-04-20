@@ -17,13 +17,13 @@
 					       <li><a href="index.html">Home</a><span>Welcome to PIC</span></li>
 					       <li class="dropdown_menu"><a href="#">About Us <i class="fa fa-sort-desc"></i></a><span>Know More About Us</span>
 								<ul class="sub-menu">
-									<li><a href="about-us.html">Information About Company</a></li>
-									<li><a href="board-of-directors.html">Board of Directors</a></li>
+									<li><a href="{{url('/about-us')}}">Information About Company</a></li>
+									<li><a href="{{url('/board-of-directors')}}">Board of Directors</a></li>
 									<li><a href="{{url('/team-member')}}">Team Members</a></li>
 									<li><a href="{{url('/branch-list')}}">Branch List</a></li>
 									<li><a href="{{url('/agents')}}">Agents</a></li>
 									<li><a href="{{url('/surveyors')}}">Surveyors</a></li>
-									<li><a href="citizens-charter.html">Citizen Charters</a></li>
+									<li><a href="{{url('/citizens-charter')}}">Citizen Charters</a></li>
 									<li><a href="{{url('/faq')}}">FAQs</a></li>
 								</ul>
 					       </li>

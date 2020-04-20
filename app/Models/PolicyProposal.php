@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class PolicyProposal extends Model
 {
-    //
+    protected $guarded = [];
 }

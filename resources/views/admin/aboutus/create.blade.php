@@ -25,7 +25,7 @@
     <section class="content">
       <div class="row">
         <div class="col-md-12">
-           <form action="{{route('about.store')}}" method="post" role="form" enctype="multipart/form-data">
+           <form action="{{url('/admin/about-us/store')}}" method="post" role="form" enctype="multipart/form-data">
                @csrf
               <div class="card card-outline card-info">
                 <div class="card-header">

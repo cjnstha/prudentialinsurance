@@ -43,8 +43,8 @@
                 <tbody>
                 @forelse($data as $key=>$about)
                 <tr>
-                  <td>{{$about->introduction}}</td>
-                  <td>{{$about->introduction_nep}}</td>
+                  <td>{!! $about->introduction !!}</td>
+                  <td>{!! $about->introduction_nep !!}</td>
                   <td>{{$about->created_at}}</td>
                   <td class="inline-flex">
                       <a href="{{route('about.edit', $about->id)}}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit </a> &nbsp; &nbsp;

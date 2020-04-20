@@ -41,7 +41,7 @@
                   </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Photo</label>
-                        <input class="form-control" name="image" type="file" id="image" style="padding-top: 3px;">
+                        <input class="form-control" name="bod_imag" type="file" id="image" style="padding-top: 3px;">
                     </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Position</label>

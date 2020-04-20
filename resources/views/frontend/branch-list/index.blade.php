@@ -26,7 +26,7 @@
 <section>
 
 				<div class="container">
-					<img src="images/branches/branches-map.png" class="img-responsive img-branches" alt="Image">
+{{--					<img src="images/branches/branches-map.png" class="img-responsive img-branches" alt="Image">--}}
                     @foreach($branches as $branch)
 					<div class="row">
 						<div class="col-md-3 col-sm-6">

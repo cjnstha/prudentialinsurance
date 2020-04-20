@@ -44,11 +44,11 @@
                 @forelse($citizens as $key=>$citizen)
                 <tr>
                   <td>{{$citizen->title}} / {{$citizen->title_nep}}</td>
-                  <td>{{$citizen->details}}</td>
-                  <td>{{$citizen->details_nep}}</td>
+                  <td>{!! $citizen->details!!}</td>
+                  <td>{!! $citizen->details_nep!!}</td>
                   <td class="inline-flex">
-                      <a href="{{route('about.edit', $citizen->id)}}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit </a> &nbsp; &nbsp;
-                      <a href="{{route('about.delete', $citizen->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete </a>
+                      <a href="{{route('citizens.edit', $citizen->id)}}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit </a> &nbsp; &nbsp;
+                      <a href="{{route('citizens.destroy', $citizen->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete </a>
                   </td>
                 </tr>
                     @empty

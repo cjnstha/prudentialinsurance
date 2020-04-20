@@ -1,7 +1,3 @@
-<?php
-$contacts = App\Contact::all();
-?>
-
 <!-- ================= Top header ============= -->
 		<div class="top_header">
 			<div class="container">

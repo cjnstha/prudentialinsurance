@@ -11,13 +11,13 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('layouts.frontend.master');
-//});
+Route::get('/', function () {
+    return view('layouts.frontend.master');
+});
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('/admin')->namespace('Admin')->group(function(){
     Route::match(['get','post'],'/','AdminController@login');
@@ -30,7 +30,7 @@ Route::prefix('/admin')->namespace('Admin')->group(function(){
         Route::post('about-us/store','AboutUsController@store')->name('about.store');
         Route::get('about-us/edit/{id}','AboutUsController@edit')->name('about.edit');
         Route::post('about-us/update/{id}','AboutUsController@update')->name('about.update');
-        Route::get('about-us/destroy/{id}','AboutUsController@destroy')->name('about.destroy');
+        Route::get('about-us/destroy/{id}','AboutUsController@destroy')->name('about.delete');
 
         //BOD Routes//
         Route::get('bod','BODController@index')->name('bod.index');
@@ -43,7 +43,7 @@ Route::prefix('/admin')->namespace('Admin')->group(function(){
         //TeamMember Routes//
         Route::get('team','TeamMemberController@index')->name('team.index');
         Route::get('team/create','TeamMemberController@create')->name('team.create');
-        Route::post('about-us/store','TeamMemberController@store')->name('team.store');
+        Route::post('team/store','TeamMemberController@store')->name('team.store');
         Route::get('team/edit/{id}','TeamMemberController@edit')->name('team.edit');
         Route::post('team/update/{id}','TeamMemberController@update')->name('team.update');
         Route::get('team/destroy/{id}','TeamMemberController@destroy')->name('team.destroy');
@@ -148,9 +148,73 @@ Route::prefix('/admin')->namespace('Admin')->group(function(){
         Route::get('agmMinute','AGMController@index')->name('agm.index');
         Route::get('agmMinute/create','AGMController@create')->name('agm.create');
         Route::post('agmMinute/store','AGMController@store')->name('agm.store');
+        Route::get('agmMinute/edit/{id}','AGMController@edit')->name('agm.edit');
+        Route::post('agmMinute/update/{id}','AGMController@update')->name('agm.update');
+        Route::get('agmMinute/destroy/{id}','AGMController@destroy')->name('agm.destroy');
 
+        //KYC Form Routes//
+        Route::get('kycForm','KYCController@index')->name('kyc.index');
+        Route::get('kycForm/create','KYCController@create')->name('kyc.create');
+        Route::post('kycForm/store','KYCController@store')->name('kyc.store');
+        Route::get('kycForm/edit/{id}','KYCController@edit')->name('kyc.edit');
+        Route::post('kycForm/update/{id}','KYCController@update')->name('kyc.update');
+        Route::get('kycForm/destroy/{id}','KYCController@destroy')->name('kyc.destroy');
+
+
+        //Claim Form Routes//
+        Route::get('claimForm','ClaimFormController@index')->name('claim.index');
+        Route::get('claimForm/create','ClaimFormController@create')->name('claim.create');
+        Route::post('claimForm/store','ClaimFormController@store')->name('claim.store');
+        Route::get('claimForm/edit/{id}','ClaimFormController@edit')->name('claim.edit');
+        Route::post('claimForm/update/{id}','ClaimFormController@update')->name('claim.update');
+        Route::get('claimForm/destroy/{id}','ClaimFormController@destroy')->name('claim.destroy');
+
+
+        //RightShare Routes//
+        Route::get('rightshare','RightShareController@index')->name('rightshare.index');
+        Route::get('rightshare/create','RightShareController@create')->name('rightshare.create');
+        Route::post('rightshare/store','RightShareController@store')->name('rightshare.store');
+        Route::get('rightshare/edit/{id}','RightShareController@edit')->name('rightshare.edit');
+        Route::post('rightshare/update/{id}','RightShareController@update')->name('rightshare.update');
+        Route::get('rightshare/destroy/{id}','RightShareController@destroy')->name('rightshare.destroy');
+
+        //Policy Proposal Form Routes//
+        Route::get('policyForm','PolicyProposalController@index')->name('policyForm.index');
+        Route::get('policyForm/create','PolicyProposalController@create')->name('policyForm.create');
+        Route::post('policyForm/store','PolicyProposalController@store')->name('policyForm.store');
+        Route::get('policyForm/edit/{id}','PolicyProposalController@edit')->name('policyForm.edit');
+        Route::post('policyForm/update/{id}','PolicyProposalController@update')->name('policyForm.update');
+        Route::get('policyForm/destroy/{id}','PolicyProposalController@destroy')->name('policyForm.destroy');
 
     });
 
 
+});
+
+Route::prefix('/')->namespace('Frontend')->group(function (){
+    Route::get('/','HomeController@index')->name('home.index');
+
+    //About Us Routes//
+    Route::get('/about-us','AboutUsController@index');
+
+    //BOD Routes//
+    Route::get('/board-of-directors','BODController@index');
+
+    //Team Members Routes//
+    Route::get('/team-member','TeamMemberController@index');
+
+    //Branch List Routes//
+    Route::get('/branch-list','BranchListController@index');
+
+    //Agents Route//
+    Route::get('/agents', 'AgentController@index');
+
+    //Surveyors Routes//
+    Route::get('/surveyors','SurveyorsController@index');
+
+    //Citizens Charters//
+    Route::get('/citizens-charter','CitizenCharterController@index');
+
+    //FAQ's Routes//
+     Route::get('/faq','FaqController@index');
 });

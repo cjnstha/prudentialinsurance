@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>AGM Form Details</h1>
+            <h1>Claim Form Details</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">AGM Form Detail</li>
+              <li class="breadcrumb-item active">Claim Form Detail</li>
             </ol>
           </div>
         </div>
@@ -27,7 +27,7 @@
           <div class="card">
             <div class="card-header">
 {{--              <h3 class="card-title">DataTable with minimal features & hover style</h3>--}}
-                <a class="btn btn-outline-primary" href="{{route('agm.create')}}"><i class="fas fa-user-plus"></i> Add AGM Form </a>
+                <a class="btn btn-outline-primary" href="{{route('claim.create')}}"><i class="fas fa-user-plus"></i> Add Claim Form </a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -42,15 +42,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                @forelse($agms as $key=>$agm)
+                @forelse($claims as $key=>$claim)
                 <tr>
                   <td>{{++$key}}</td>
-                  <td>{{$agm->agm_name}}</td>
-                  <td>{{$agm->agm_files}}</td>
-                  <td>{{$agm->status}}</td>
+                  <td>{{$claim->claim_name}}</td>
+                  <td>{{$claim->claim_files}}</td>
+                  <td>{{$claim->status}}</td>
                   <td class="inline-flex">
-                      <a href="{{route('agm.edit',$agm->id)}}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit </a> &nbsp; &nbsp;
-                      <a href="{{route('agm.destroy',$agm->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete </a>
+                      <a href="{{route('claim.edit',$claim->id)}}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit </a> &nbsp; &nbsp;
+                      <a href="{{route('claim.destroy',$claim->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete </a>
                   </td>
                 </tr>
                     @empty
