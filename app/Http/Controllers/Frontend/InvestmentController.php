@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class InvestmentController extends Controller
 {
     public function index(){
-        $investors = Investor::all();
-        return view('frontend.investment.index',compact('investors'));
+        $investments = Investor::all();
+        return view('frontend.investment.index',compact('investments'));
     }
 }

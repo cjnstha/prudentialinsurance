@@ -1,13 +1,13 @@
 @extends('layouts.frontend.master')
 @section('title')
-    AGM Minute
+    Claim Form
 @endsection
 @section('contents')
 <!-- ========================== Inner Banner =================== -->
 	<section class="inner_banner">
 		<div class="container">
 			<div class="banner-title">
-				<h1>AGM Minute </h1>
+				<h1>Claim Form </h1>
 				<span class="decor-equal"></span>
 			</div>
 		</div>
@@ -20,13 +20,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-6 col-sm-6 col-xs-3">
-					<h5>AGM Minute </h5>
+					<h5>Claim Form </h5>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-9" style="text-align:right;">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li class="dot"></li>
-						<li>AGM Minute </li>
+						<li>Claim Form</li>
 					</ul>
 				</div>
 			</div>
@@ -46,12 +46,11 @@
 					  <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
 
 					    <li class="active"><a href="{{url('/agm-minute')}}"> AGM Minute <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="KYC-forms.html">KYC Forms  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="policy-proposal-form.html">Policy Proposal Form  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="right-share.html">Right Share  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="claim-form.html">Claim Form  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="surveyor-listing-application-form.html">Surveyor Listing Application Form  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="branch-download.html">Branch Download  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/kyc-form')}}">KYC Forms  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/policy-proposal-form')}}">Policy Proposal Form  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/right-share')}}">Right Share  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/claim-form')}}">Claim Form  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/surveyor-listing-application-form')}}">Surveyor Listing Application Form  <i class="fa fa-angle-right"></i></a></li>
 					  </ul>
 				  </div>
 				</div>
@@ -67,18 +66,20 @@
 					                            </tr>
 					                        </thead>
 					                        <tbody>
-                                            @foreach($agms as $agm)
+                                            @forelse($claims as $claim)
 					                            <tr>
-					                                <td data-label="Name" title="AGM Minute">{{$agm->agm_name}}</td>
-					                                <td data-label="Date Added">{{$agm->updated_at}}</td>
+					                                <td data-label="Name" title="AGM Minute">{{$claim->claim_name}}</td>
+					                                <td data-label="Date Added">{{$claim->updated_at}}</td>
 {{--					                                <td data-label="View File">--}}
 {{--					                                    <a class='btn btnViewFile' data-target="{{ asset($agm->agm_files)}}" data-title="{!! $agm->agm_files !!}" data-modal="downloadModal" title="View File"><i class='fa fa-eye'></i> View</a>--}}
 {{--					                                </td>--}}
 					                                <td data-label="Download File">
-					                                    <a href="../public/storage/{{$agm->agm_files}}" title="Download Attachment" class='btn' download target='_blank'><span><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span> Download <i class="fa fa-download" aria-hidden="true"></i></a>
+					                                    <a href="../public/storage/{{$claim->claim_files}}" title="Download Attachment" class='btn' download target='_blank'><span><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span> Download <i class="fa fa-download" aria-hidden="true"></i></a>
 					                                </td>
 					                            </tr>
-                                                @endforeach
+                                            @empty
+                                                <p>No Data Available</p>
+                                            @endforelse
 					                        </tbody>
 					                    </table>
 				        <div class="more-download">
@@ -95,3 +96,4 @@
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js" defer></script>
 @endsection
+Claim Form

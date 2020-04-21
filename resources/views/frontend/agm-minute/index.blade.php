@@ -46,12 +46,11 @@
 					  <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
 
 					    <li class="active"><a href="{{url('/agm-minute')}}"> AGM Minute <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="KYC-forms.html">KYC Forms  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="policy-proposal-form.html">Policy Proposal Form  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="right-share.html">Right Share  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="claim-form.html">Claim Form  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="surveyor-listing-application-form.html">Surveyor Listing Application Form  <i class="fa fa-angle-right"></i></a></li>
-						<li><a href="branch-download.html">Branch Download  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/kyc-form')}}">KYC Forms  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/policy-proposal-form')}}">Policy Proposal Form  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/right-share')}}">Right Share  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/claim-form')}}">Claim Form  <i class="fa fa-angle-right"></i></a></li>
+						<li><a href="{{url('/surveyor-listing-application-form')}}">Surveyor Listing Application Form  <i class="fa fa-angle-right"></i></a></li>
 					  </ul>
 				  </div>
 				</div>
@@ -67,7 +66,7 @@
 					                            </tr>
 					                        </thead>
 					                        <tbody>
-                                            @foreach($agms as $agm)
+                                            @forelse($agms as $agm)
 					                            <tr>
 					                                <td data-label="Name" title="AGM Minute">{{$agm->agm_name}}</td>
 					                                <td data-label="Date Added">{{$agm->updated_at}}</td>
@@ -78,7 +77,9 @@
 					                                    <a href="../public/storage/{{$agm->agm_files}}" title="Download Attachment" class='btn' download target='_blank'><span><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span> Download <i class="fa fa-download" aria-hidden="true"></i></a>
 					                                </td>
 					                            </tr>
-                                                @endforeach
+                                            @empty
+                                                <p>No Data Available</p>
+                                            @endforelse
 					                        </tbody>
 					                    </table>
 				        <div class="more-download">

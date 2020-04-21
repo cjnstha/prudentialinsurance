@@ -43,7 +43,12 @@
                         <div class="contents">
                             <div class="no-structure">
 
-                                       {!! $capitals[0]->capital_details !!}
+                                      @forelse($capitals as $capital)
+                                          {{$capital->capital_details}}
+                                @empty
+                                          <h1>No Data Available</h1>
+                                @endforelse
+
                             </div>
                         </div>
                     </div>

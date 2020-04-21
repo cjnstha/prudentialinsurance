@@ -42,7 +42,11 @@
                     <div class="financial__section documentUI">
                         <div class="contents barChartImplementation">
                             <div class="reporttable datatable">
-                                {!! $premiums[0]->premium_details !!}
+                                @forelse($premiums as $premium)
+                                    {!! $premium->premium_details !!}
+                                @empty
+                                    <h1>No Data Available</h1>
+                                    @endforelse
 
                             </div>
                         </div>
