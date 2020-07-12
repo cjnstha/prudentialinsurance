@@ -327,9 +327,10 @@
                     </div>
                     <div class="some_speach">
                         <h3>"WELCOME TO PRUDENTIAL INSURANCE CO. LTD."</h3>
-                        @if($abouts)
-                            <p>{!! \Illuminate\Support\Str::limit($abouts[0]['introduction'], 440) !!}</p>
-                        @endif
+{{--                        @forelse$abouts as $about)--}}
+{{--                            <p>{!! \Illuminate\Support\Str::limit($about->introduction, 440) !!}</p>--}}
+{{--                        @empty--}}
+{{--                        @endforelse--}}
                         <a href="#" class="button-main hvr-sweep-to-rightB read_more transition3s">Read More <i
                                 class="fa fa-long-arrow-right"></i></a>
                     </div>

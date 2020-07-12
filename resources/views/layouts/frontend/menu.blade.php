@@ -14,36 +14,36 @@
 					   <!-- Collect the nav links and other content for toggling -->
 					   <div class="collapse navbar-collapse" id="navbar-collapse-1">
 					     <ul class="nav navbar-nav">
-					       <li><a href="{{url('/', app()->getLocale())}}">@lang('home.home_menu')</a></li>
-					       <li class="dropdown_menu"><a href="#">About Us <i class="fa fa-sort-desc"></i></a>
+					       <li><a href="{{url('/')}}">@lang('home.home_menu')</a></li>
+					       <li class="dropdown_menu"><a href="#">@lang('home.about_menu')<i class="fa fa-sort-desc"></i></a>
 								<ul class="sub-menu">
 									<li><a href="{{url('/about-us')}}">@lang('home.info_company')</a></li>
 									<li><a href="{{url('/board-of-directors')}}">@lang('home.bod')</a></li>
-									<li><a href="{{url('/team-member')}}">Team Members</a></li>
-									<li><a href="{{url('/branch-list')}}">Branch List</a></li>
-									<li><a href="{{url('/agents')}}">Agents</a></li>
-									<li><a href="{{url('/surveyors')}}">Surveyors</a></li>
-									<li><a href="{{url('/citizens-charter')}}">Citizen Charters</a></li>
-									<li><a href="{{url('/faq')}}">FAQs</a></li>
+									<li><a href="{{url('/team-member')}}">@lang('home.team')</a></li>
+									<li><a href="{{url('/branch-list')}}">@lang('home.branch_list')</a></li>
+									<li><a href="{{url('/agents')}}">@lang('home.agent')</a></li>
+									<li><a href="{{url('/surveyors')}}">@lang('home.surveyors')</a></li>
+									<li><a href="{{url('/citizens-charter')}}">@lang('home.citizen_charter')</a></li>
+									<li><a href="{{url('/faq')}}">@lang('home.faq')</a></li>
 								</ul>
 					       </li>
-					       <li class="dropdown_menu"><a href="#">Products <i class="fa fa-sort-desc"></i></a>
+					       <li class="dropdown_menu"><a href="#">@lang('home.products') <i class="fa fa-sort-desc"></i></a>
 					       		<ul class="sub-menu">
-									<li><a href="property-insurance.html">Property Insurance</a></li>
-									<li><a href="motor-insurance.html">Motor Insurance</a></li>
-									<li><a href="home-insurance.html">Home Insurance</a></li>
-									<li><a href="micro-insurance.html">Micro Insurance</a></li>
-									<li><a href="fire-insurance.html">Fire Insurance</a></li>
+									<li><a href="{{url('/property-insurance')}}">@lang('home.property')</a></li>
+									<li><a href="motor-insurance.html">@lang('home.motor')</a></li>
+									<li><a href="home-insurance.html">@lang('home.ho_ins')</a></li>
+									<li><a href="micro-insurance.html">@lang('home.micro')</a></li>
+									<li><a href="fire-insurance.html">@lang('home.fire')</a></li>
 								</ul>
 					       </li>
-					       <li class="dropdown_menu"><a href="#">Financial Statements <i class="fa fa-sort-desc"></i></a>
+					       <li class="dropdown_menu"><a href="#"> @lang('home.financial') <i class="fa fa-sort-desc"></i></a>
 					       		<ul class="sub-menu">
-									<li><a href="{{url('/capital-structures')}}">Capital Structure</a></li>
-									<li><a href="{{url('/premium-structure')}}">Premium Structure</a></li>
-									<li><a href="{{url('/investment')}}">Investment</a></li>
-									<li><a href="{{url('/reserves')}}">Reserve</a></li>
-									<li><a href="quaterly-report.html">Quaterly Report</a></li>
-									<li><a href="financial-report.html">Financial Report</a></li>
+									<li><a href="{{url('/capital-structures')}}">@lang('home.cap_struct')</a></li>
+									<li><a href="{{url('/premium-structure')}}">@lang('home.prem_cal')</a></li>
+									<li><a href="{{url('/investment')}}">@lang('home.invest')</a></li>
+									<li><a href="{{url('/reserves')}}">@lang('home.reserve')</a></li>
+									<li><a href="quaterly-report.html">@lang('home.quarter')</a></li>
+									<li><a href="financial-report.html">@lang('home.finance')</a></li>
 								</ul>
 					       </li>
 					       <li class="dropdown_menu"><a href="#">Info Center <i class="fa fa-sort-desc"></i></a>

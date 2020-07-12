@@ -103,15 +103,53 @@
                     </ul>
                 </li>
 
-{{--                <li class="nav-item has-treeview menu-open">--}}
-{{--                    <a href="{{route('products.index')}}"--}}
-{{--                       class="nav-link {{ Route::currentRouteNamed('product.index') ? 'active' : '' }}">--}}
-{{--                        <i class="nav-icon fas fa-tachometer-alt"></i>--}}
-{{--                        <p>--}}
-{{--                            Products--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tasks"></i>
+                        <p>
+                            Products
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('capital.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('capital.index') ? 'active' : '' }}">
+{{--                                <i class="far fa-id-card nav-icon"></i>--}}
+                                <p>Property Insurance</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('premium.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('premium.index') ? 'active' : '' }}">
+{{--                                <i class="fas fa-sitemap nav-icon"></i>--}}
+                                <p>Motor Insurance</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('investment.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('investment.index') ? 'active' : '' }}">
+{{--                                <i class="fas fa-users nav-icon"></i>--}}
+                                <p>Home Insurance</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('reserve.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('reserve.index') ? 'active' : '' }}">
+{{--                                <i class="fas fa-trophy nav-icon"></i>--}}
+                                <p>Micro Insurance</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('quarter.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('quarter.index') ? 'active' : '' }}">
+{{--                                <i class="fas fa-user nav-icon"></i>--}}
+                                <p>Fire Insurance</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
 
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
@@ -193,25 +231,29 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('kyc.index')}}" class="nav-link {{ Route::currentRouteNamed('kyc.index') ? 'active' : '' }}">
+                            <a href="{{route('kyc.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('kyc.index') ? 'active' : '' }}">
                                 <i class="fas fa-user-tag nav-icon"></i>
                                 <p>KYC Forms</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('claim.index')}}" class="nav-link {{ Route::currentRouteNamed('claim.index') ? 'active' : '' }}">
+                            <a href="{{route('claim.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('claim.index') ? 'active' : '' }}">
                                 <i class="fas fa-user-tag nav-icon"></i>
                                 <p>Claim Forms</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('rightshare.index')}}" class="nav-link {{ Route::currentRouteNamed('rightshare.index') ? 'active' : '' }}">
+                            <a href="{{route('rightshare.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('rightshare.index') ? 'active' : '' }}">
                                 <i class="fas fa-user-tag nav-icon"></i>
                                 <p>Right Share Forms</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('policyForm.index')}}" class="nav-link {{ Route::currentRouteNamed('policyForm.index') ? 'active' : '' }}">
+                            <a href="{{route('policyForm.index')}}"
+                               class="nav-link {{ Route::currentRouteNamed('policyForm.index') ? 'active' : '' }}">
                                 <i class="fas fa-user-tag nav-icon"></i>
                                 <p>Policy Proposal Forms</p>
                             </a>
@@ -222,61 +264,61 @@
                                 <p>Surveyor Listing Applicatio Forms</p>
                             </a>
                         </li>
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>Branch Downloads</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item has-treeview">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-tasks"></i>--}}
-{{--                        <p>--}}
-{{--                            User Management--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-users')}}"--}}
-{{--                               class="nav-link {{ Route::currentRouteNamed('users.index') ? 'active' : '' }} ">--}}
-{{--                                <i class="fas fa-user nav-icon"></i>--}}
-{{--                                <p>Users</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>Roles</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item has-treeview">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-tasks"></i>--}}
-{{--                        <p>--}}
-{{--                            System Settings--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/view-settings')}}"--}}
-{{--                               class="nav-link {{ Route::currentRouteNamed('settings.index') ? 'active' : '' }} ">--}}
-{{--                                <i class="fas fa-user nav-icon"></i>--}}
-{{--                                <p>Settings</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{url('/admin/contact-form/generalContact')}}"--}}
-{{--                               class="nav-link {{ Route::currentRouteNamed('contact.index') ? 'active' : '' }} ">--}}
-{{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
-{{--                                <p>Contact Us</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
+                        {{--                        <li class="nav-item">--}}
+                        {{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
+                        {{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
+                        {{--                                <p>Branch Downloads</p>--}}
+                        {{--                            </a>--}}
+                        {{--                        </li>--}}
+                        {{--                    </ul>--}}
+                        {{--                </li>--}}
+                        {{--                <li class="nav-item has-treeview">--}}
+                        {{--                    <a href="#" class="nav-link">--}}
+                        {{--                        <i class="nav-icon fas fa-tasks"></i>--}}
+                        {{--                        <p>--}}
+                        {{--                            User Management--}}
+                        {{--                            <i class="fas fa-angle-left right"></i>--}}
+                        {{--                        </p>--}}
+                        {{--                    </a>--}}
+                        {{--                    <ul class="nav nav-treeview">--}}
+                        {{--                        <li class="nav-item">--}}
+                        {{--                            <a href="{{url('/admin/view-users')}}"--}}
+                        {{--                               class="nav-link {{ Route::currentRouteNamed('users.index') ? 'active' : '' }} ">--}}
+                        {{--                                <i class="fas fa-user nav-icon"></i>--}}
+                        {{--                                <p>Users</p>--}}
+                        {{--                            </a>--}}
+                        {{--                        </li>--}}
+                        {{--                        <li class="nav-item">--}}
+                        {{--                            <a href="{{url('/admin/view-roles')}}" class="nav-link">--}}
+                        {{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
+                        {{--                                <p>Roles</p>--}}
+                        {{--                            </a>--}}
+                        {{--                        </li>--}}
+                        {{--                    </ul>--}}
+                        {{--                </li>--}}
+                        {{--                <li class="nav-item has-treeview">--}}
+                        {{--                    <a href="#" class="nav-link">--}}
+                        {{--                        <i class="nav-icon fas fa-tasks"></i>--}}
+                        {{--                        <p>--}}
+                        {{--                            System Settings--}}
+                        {{--                            <i class="fas fa-angle-left right"></i>--}}
+                        {{--                        </p>--}}
+                        {{--                    </a>--}}
+                        {{--                    <ul class="nav nav-treeview">--}}
+                        {{--                        <li class="nav-item">--}}
+                        {{--                            <a href="{{url('/admin/view-settings')}}"--}}
+                        {{--                               class="nav-link {{ Route::currentRouteNamed('settings.index') ? 'active' : '' }} ">--}}
+                        {{--                                <i class="fas fa-user nav-icon"></i>--}}
+                        {{--                                <p>Settings</p>--}}
+                        {{--                            </a>--}}
+                        {{--                        </li>--}}
+                        {{--                        <li class="nav-item">--}}
+                        {{--                            <a href="{{url('/admin/contact-form/generalContact')}}"--}}
+                        {{--                               class="nav-link {{ Route::currentRouteNamed('contact.index') ? 'active' : '' }} ">--}}
+                        {{--                                <i class="fas fa-user-tag nav-icon"></i>--}}
+                        {{--                                <p>Contact Us</p>--}}
+                        {{--                            </a>--}}
+                        {{--                        </li>--}}
                     </ul>
                 </li>
             </ul>

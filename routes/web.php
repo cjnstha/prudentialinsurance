@@ -188,15 +188,13 @@ Route::prefix('/admin')->namespace('Admin')->group(function () {
 
 
 });
-    Route::get('/', 'Frontend\HomeController@index')->name('home.index');
 
 
     //Multi Language Routes//
-Route::prefix('/{language}')->namespace('Frontend')->group(function () {
+Route::prefix('/')->namespace('Frontend')->group(function () {
 //    Route::redirect('/','/en');
 
     Route::get('/', 'HomeController@index')->name('home.index');
-
     //About Us Routes//
     Route::get('/about-us', 'AboutUsController@index');
 
@@ -254,6 +252,21 @@ Route::prefix('/{language}')->namespace('Frontend')->group(function () {
 
     //Surveyor Listing Application. Form Routes//
     Route::get('/surveyor-listing-application-form', 'SurveyorListingController@index');
+
+    //Our Products Routes//
+
+    //Property Insurance Routes//
+    Route::get('/property-insurance','PropertyInsuranceController@index');
+});
+
+Route::get('locale/{locale}', function ($locale) {
+
+	Session::put('locale', $locale);
+
+	return redirect()->back();
+
+	/* This link will add session of language when they click to change language*/
+
 });
 
 

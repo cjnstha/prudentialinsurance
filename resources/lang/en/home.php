@@ -196,7 +196,11 @@ return [
 
     'finance' => "Financial Report",
 
-    'fire' => "Property Insurance",
+    'products' => "Products",
+
+    'property' => "Property Insurance",
+
+    'fire' => "Fire Insurance",
 
     'motor' => "Motor Insurance",
 

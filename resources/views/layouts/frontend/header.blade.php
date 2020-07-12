@@ -19,13 +19,17 @@
                 <div class="dropdown">
                     <button class="btn-dropdown dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
                             aria-haspopup="true">
-                        English
+                        @if(session("locale") === null || session("locale") === 'en')
+                            English
+                        @else
+                            Nepali
+                        @endif
                         <i class="fa fa-angle-down"></i>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><img src="{{asset('images/front_img/home/usa.png')}}" alt="image"><a href="{{url('/en')}}" >Eng</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width: 100%;">
+                        <li style="float: left; "><a href="{{url('locale/en')}}" class="{{ session("locale") === null || session("locale") === "en" ? "active" : "" }}" style="color: white; font-weight: bold;" >English</a>
                         </li>
-                        <li><a href="{{url('/nep')}}" >Nepali<img src="{{asset('images/front_img/home/nepal.png')}}" alt="image"></a></li>
+                        <li style="display:inline-flex; "><a href="{{url('locale/nep')}}" class="{{ session("locale") === "nep"? "active" : "" }}"  style="color: white; font-weight: bold;">Nepali</a></li>
                     </ul>
                 </div>
             </div>
